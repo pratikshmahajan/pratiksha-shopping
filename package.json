@@ -1,0 +1,23 @@
+{
+  "name": "pratiksha-shopping",
+  "version": "1.0.0",
+  "private": true,
+  "type": "module",
+  "scripts": {
+    "dev": "vite",
+    "server": "node server/server.cjs",
+    "start:all": "concurrently \"npm run dev\" \"npm run server\"",
+    "build": "vite build"
+  },
+  "dependencies": {
+    "@vitejs/plugin-react": "latest",
+    "cors": "^2.8.6",
+    "express": "^5.3.0",
+    "react": "latest",
+    "react-dom": "latest",
+    "vite": "latest"
+  },
+  "devDependencies": {
+    "concurrently": "^10.0.6"
+  }
+}
