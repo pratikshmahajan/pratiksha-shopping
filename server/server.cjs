@@ -4,9 +4,14 @@ const cors = require("cors");
 const crypto = require("crypto");
 
 const app = express();
-const PORT = 5000;
+const PORT = process.env.PORT || 5000;
 
-app.use(cors({ origin: "http://localhost:5173" }));
+app.use(cors({
+  origin: [
+    "http://localhost:5173",
+    "http://localhost:4173"
+  ]
+}));
 app.use(express.json());
 
 const users = [];
